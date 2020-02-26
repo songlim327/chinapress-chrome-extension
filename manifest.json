@@ -1,0 +1,22 @@
+{
+  "name": "Chinapress Chrome Extension",
+  "version": "0.1",
+  "description": "An extension which allows one to read news without login.",
+  "manifest_version": 2,
+  "permissions": ["storage"],
+  "browser_action": {
+    "default_icon": { "128": "icons.png" },
+    "default_popup": "popup.html",
+    "default_title": "Meow Meow"
+  },
+  "icons": { "128": "icons.png" },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.chinapress.com.my/*",
+        "http://www.chinapress.com.my/*"
+      ],
+      "js": ["contentScript.js"]
+    }
+  ]
+}
